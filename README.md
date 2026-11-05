@@ -18,7 +18,12 @@ Bad_flg_90plus_24m: binary variable that = 0 if the person defaulted
 Consumer_bad_flg_90plus_24m: binary variable that = 0 if the person defaulted (company-specific)
 
 Variables to look at:
-Acct1, Acct3, Acct5, Col1, Del4, Bad_flg
+Acct1, Acct3, Acct5, Col1, Del4, Del6, Bad_flg
 
-We took Del4, turn the total number of trades 30 or more days in the last 12 months into a proportion given the total number of trades ever and see if this proportion matches
+We took Del4, look at the total number of trades 30 or more days delinquent in the last 12 months and compare that to total number of open trades. Look at the proportion of total number of open trades that are delinquent?
 
+Limit Acct5 to be < 12 months so that this variable matches up more appropriately with del4
+
+Limit Del6 to be < 12 months too to compare with Del4: if a person has low months, we want to see if they are more likely to default because it shows they're currently doing poorly with their credit account
+
+Possible decision tree: use random forest classifier and recursive binary splitting 
