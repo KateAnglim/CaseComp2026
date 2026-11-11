@@ -35,6 +35,8 @@ Next, we consider looking at the consumer_bad_flg variable as dependent instead.
 
 I cannot currently think of any more ways to improve f1 score *with the variables we have selected*. It may simply be the case that we do not have enough default cases to build a strong decision tree model. 
 
+Acct7, Del1
+
 
 
 
