@@ -29,6 +29,12 @@ The random prediction section provides metrics for if we were to simply classify
 
 Next steps: how to improve f1 score further?
 
+Random forest Classifier did not improve predictions by a significant amount. In fact, it actually sharply decreases f1 score for default cases by over 0.20. Considering a subset of variables at each split does not seem to improve model accuracy.
+
+Next, we consider looking at the consumer_bad_flg variable as dependent instead. There are 9% default cases for this variable, which is a good improvement from the 6% of the normal bad_flg variable. Using this variable instead in the decision tree, along with adjusting class weights and tree depths, improved f1 score up to 0.37.
+
+I cannot currently think of any more ways to improve f1 score *with the variables we have selected*. It may simply be the case that we do not have enough default cases to build a strong decision tree model. 
+
 
 
 
